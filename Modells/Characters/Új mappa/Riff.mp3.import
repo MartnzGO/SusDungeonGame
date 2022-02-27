@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Riff.mp3-c00fcc11101760f2f5982b00bbf15df1.mp3str"
+
+[deps]
+
+source_file="res://Modells/Characters/Új mappa/Riff.mp3"
+dest_files=[ "res://.import/Riff.mp3-c00fcc11101760f2f5982b00bbf15df1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

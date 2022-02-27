@@ -1,0 +1,48 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://addons/Map Generator Testing Ground/generator.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/corridor-L.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/bridge-room.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/corridor-short.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/room_start.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/corridor-long.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/threedoor-room.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/fourdoor-room.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/Birch_exit.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/TileSets/Dungeon1/corridor_joint.tscn" type="PackedScene" id=13]
+
+
+[node name="Spatial" type="Spatial"]
+
+[node name="DungeonGenerator" type="Spatial" parent="."]
+script = ExtResource( 1 )
+use_physics_engine = false
+
+[node name="rooms" type="Spatial" parent="DungeonGenerator"]
+visible = false
+
+[node name="room_start" parent="DungeonGenerator/rooms" instance=ExtResource( 8 )]
+
+[node name="bridge-room" parent="DungeonGenerator/rooms" instance=ExtResource( 6 )]
+
+[node name="corridor-L" parent="DungeonGenerator/rooms" instance=ExtResource( 5 )]
+is_room = false
+
+[node name="corridor-long" parent="DungeonGenerator/rooms" instance=ExtResource( 9 )]
+is_room = false
+
+[node name="corridor-short" parent="DungeonGenerator/rooms" instance=ExtResource( 7 )]
+is_room = false
+
+[node name="threedoor-room" parent="DungeonGenerator/rooms" instance=ExtResource( 10 )]
+
+[node name="fourdoor-room" parent="DungeonGenerator/rooms" instance=ExtResource( 11 )]
+
+[node name="corridor_joint" parent="DungeonGenerator/rooms" instance=ExtResource( 13 )]
+is_room = false
+
+[node name="Birch_exit" parent="DungeonGenerator/rooms" instance=ExtResource( 12 )]
+is_room = false
+
+[node name="objects" type="Spatial" parent="DungeonGenerator"]
+visible = false

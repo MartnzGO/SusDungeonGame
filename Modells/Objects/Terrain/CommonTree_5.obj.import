@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/CommonTree_5.obj-2ea9c5a18ed3e65a14d7d172b1352899.mesh"
+
+[deps]
+
+files=[ "res://.import/CommonTree_5.obj-2ea9c5a18ed3e65a14d7d172b1352899.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/CommonTree_5.obj"
+dest_files=[ "res://.import/CommonTree_5.obj-2ea9c5a18ed3e65a14d7d172b1352899.mesh", "res://.import/CommonTree_5.obj-2ea9c5a18ed3e65a14d7d172b1352899.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

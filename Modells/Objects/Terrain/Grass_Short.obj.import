@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Grass_Short.obj-41fb57dd0fa4042d832af2c0112ed86d.mesh"
+
+[deps]
+
+files=[ "res://.import/Grass_Short.obj-41fb57dd0fa4042d832af2c0112ed86d.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/Grass_Short.obj"
+dest_files=[ "res://.import/Grass_Short.obj-41fb57dd0fa4042d832af2c0112ed86d.mesh", "res://.import/Grass_Short.obj-41fb57dd0fa4042d832af2c0112ed86d.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

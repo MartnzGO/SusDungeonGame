@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Modells/TileSets/Dungeon1/threedoor-room.glb" type="PackedScene" id=1]
+[ext_resource path="res://addons/Map Generator Testing Ground/modular_room_exit.gd" type="Script" id=2]
+[ext_resource path="res://addons/Map Generator Testing Ground/modular_room.gd" type="Script" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 6.40601, 2.14331, 5.81114 )
+
+[node name="threedoor-room" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+script = ExtResource( 3 )
+
+[node name="exit2" type="Spatial" parent="." index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.954505, 1.00237, -3.3225 )
+script = ExtResource( 2 )
+
+[node name="exit3" type="Spatial" parent="." index="6"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.617, 1.002, -14.634 )
+script = ExtResource( 2 )
+
+[node name="exit4" type="Spatial" parent="." index="7"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.319, 1.002, -3.553 )
+script = ExtResource( 2 )
+
+[node name="space" type="Area" parent="." index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.743876, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="space" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.79746, 1.0729, -9.07023 )
+shape = SubResource( 1 )

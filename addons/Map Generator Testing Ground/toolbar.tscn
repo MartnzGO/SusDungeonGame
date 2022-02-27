@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Map Generator Testing Ground/toolbar.gd" type="Script" id=1]
+
+[node name="Toolbar" type="HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MergeMeshes" type="Button" parent="."]
+margin_right = 107.0
+margin_bottom = 40.0
+text = "Merge meshes"
+
+[node name="JoinRooms" type="Button" parent="."]
+margin_left = 111.0
+margin_right = 146.0
+margin_bottom = 40.0
+text = "Join"
+
+[node name="VSeparator" type="VSeparator" parent="."]
+margin_left = 150.0
+margin_right = 154.0
+margin_bottom = 40.0
+
+[node name="SceneButtons" type="HBoxContainer" parent="."]
+margin_left = 158.0
+margin_right = 158.0
+margin_bottom = 40.0
+
+[connection signal="pressed" from="MergeMeshes" to="." method="_on_MergeMeshes_pressed"]
+[connection signal="pressed" from="JoinRooms" to="." method="_on_JoinRooms_pressed"]

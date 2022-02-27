@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/TreeStump.obj-225f7629e58fcbbf479bae3a0104f3a6.mesh"
+
+[deps]
+
+files=[ "res://.import/TreeStump.obj-225f7629e58fcbbf479bae3a0104f3a6.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/TreeStump.obj"
+dest_files=[ "res://.import/TreeStump.obj-225f7629e58fcbbf479bae3a0104f3a6.mesh", "res://.import/TreeStump.obj-225f7629e58fcbbf479bae3a0104f3a6.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Modells/Objects/Terrain/BirchTree_1.obj" type="ArrayMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="BirchTree_1" type="MeshInstance" parent="."]
+transform = Transform( 2.38139, 0, 0, 0, 1.95918, 0, 0, 0, 1.59647, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null

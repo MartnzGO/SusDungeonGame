@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Modells/Items/Drinks/Drink1.glb" type="PackedScene" id=1]
+
+[node name="Drink1" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8287, -9.39159, -8.02278 )
+
+[node name="potion_8_lambert20_0" parent="RootNode (gltf orientation matrix)/RootNode (model correction matrix)/8cfe40ffa4af4026b2d411a805e05084fbx/RootNode/potion_8" index="0"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, 0, 0 )

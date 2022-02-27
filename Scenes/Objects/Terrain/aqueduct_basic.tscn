@@ -1,0 +1,149 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Modells/Objects/Terrain/aqueduct_basic.glb" type="PackedScene" id=1]
+
+[node name="aqueduct_basic" instance=ExtResource( 1 )]
+
+[node name="battlement" parent="." index="0"]
+transform = Transform( 0, 5.22621e-07, -8.2051, -3.54244e-07, 3.1, 1.38328e-06, 4.2025, 2.6131e-07, 0, -27.1937, 2.20001, -103.9 )
+
+[node name="battlement2" parent="." index="1"]
+transform = Transform( 0, 5.22621e-07, -8.2051, -3.54236e-07, 3.1, 1.38328e-06, 4.2024, 2.6131e-07, 0, -27.1937, 2.20001, -100 )
+
+[node name="battlement3" parent="." index="2"]
+transform = Transform( 0, 5.22621e-07, -8.2106, -3.5448e-07, 3.1, 1.3842e-06, 4.2053, 2.6131e-07, 0, -27.1652, 2.2, -79.967 )
+
+[node name="battlement4" parent="." index="3"]
+transform = Transform( 0, 5.22621e-07, -8.209, -3.54413e-07, 3.1, 1.38393e-06, 4.2045, 2.6131e-07, 0, -27.1652, 2.2, -75.9669 )
+
+[node name="battlement5" parent="." index="4"]
+transform = Transform( 0, 5.22621e-07, -8.2089, -3.54404e-07, 3.1, 1.38392e-06, 4.2044, 2.6131e-07, 0, -27.1652, 2.2, -71.867 )
+
+[node name="battlement6" parent="." index="5"]
+transform = Transform( 0, 5.22621e-07, -8.2098, -3.54447e-07, 3.1, 1.38407e-06, 4.2049, 2.6131e-07, 0, -27.1652, 2.2, -67.867 )
+
+[node name="battlement7" parent="." index="6"]
+transform = Transform( 0, 5.22621e-07, -8.208, -3.54371e-07, 3.1, 1.38377e-06, 4.204, 2.6131e-07, 0, -27.1652, 2.2, -63.7669 )
+
+[node name="battlement8" parent="." index="7"]
+transform = Transform( 0, 5.22621e-07, -8.2085, -3.54388e-07, 3.1, 1.38385e-06, 4.2042, 2.6131e-07, 0, -27.1652, 2.2, -84.067 )
+
+[node name="battlement9" parent="." index="8"]
+transform = Transform( 0, 5.22621e-07, -8.2103, -3.54455e-07, 3.1, 1.38415e-06, 4.205, 2.6131e-07, 0, -27.1652, 2.2, -88.067 )
+
+[node name="battlement10" parent="." index="9"]
+transform = Transform( 0, 5.22621e-07, -8.2099, -3.54447e-07, 3.1, 1.38409e-06, 4.2049, 2.6131e-07, 0, -27.1652, 2.2, -92.167 )
+
+[node name="battlement11" parent="." index="10"]
+transform = Transform( 0, 5.22621e-07, -8.208, -3.54362e-07, 3.1, 1.38377e-06, 4.2039, 2.6131e-07, 0, -27.1652, 2.2, -96.267 )
+
+[node name="battlement12" parent="." index="12"]
+transform = Transform( 0, 5.22621e-07, -8.2074, -3.54345e-07, 3.1, 1.38366e-06, 4.2037, 2.6131e-07, 0, -27.1652, 2.2, -59.7669 )
+
+[node name="battlement13" parent="." index="13"]
+transform = Transform( 0, 5.22621e-07, -8.2086, -3.54396e-07, 3.1, 1.38387e-06, 4.2043, 2.6131e-07, 0, -27.1652, 2.2, -55.6669 )
+
+[node name="battlement14" parent="." index="14"]
+transform = Transform( 0, 5.22621e-07, -8.2086, -3.54396e-07, 3.1, 1.38387e-06, 4.2043, 2.6131e-07, 0, -27.1652, 2.2, -51.5669 )
+
+[node name="battlement15" parent="." index="15"]
+transform = Transform( 0, 5.22621e-07, -8.2085, -3.54388e-07, 3.1, 1.38385e-06, 4.2042, 2.6131e-07, 0, -27.1652, 2.2, -47.5669 )
+
+[node name="battlement16" parent="." index="16"]
+transform = Transform( 0, 5.22621e-07, -8.2074, -3.54337e-07, 3.1, 1.38366e-06, 4.2036, 2.6131e-07, 0, -27.1652, 2.2, -43.4669 )
+
+[node name="battlement17" parent="." index="17"]
+transform = Transform( 0, 5.22621e-07, -8.2073, -3.54337e-07, 3.1, 1.38365e-06, 4.2036, 2.6131e-07, 0, -27.1652, 2.2, -39.4669 )
+
+[node name="battlement18" parent="." index="18"]
+transform = Transform( 0, 5.22621e-07, -8.2078, -3.54362e-07, 3.1, 1.38373e-06, 4.2039, 2.6131e-07, 0, -27.1652, 2.2, -35.3669 )
+
+[node name="battlement19" parent="." index="19"]
+transform = Transform( 0, 5.22621e-07, -8.207, -3.54329e-07, 3.1, 1.3836e-06, 4.2035, 2.6131e-07, 0, -27.1652, 2.2, -31.3669 )
+
+[node name="battlement20" parent="." index="20"]
+transform = Transform( 0, 5.22621e-07, -8.2071, -3.54329e-07, 3.1, 1.38361e-06, 4.2035, 2.6131e-07, 0, -27.1652, 2.2, -27.2669 )
+
+[node name="battlement21" parent="." index="21"]
+transform = Transform( 0, 5.22621e-07, -8.207, -3.54329e-07, 3.1, 1.3836e-06, 4.2035, 2.6131e-07, 0, -27.1652, 2.2, -23.2669 )
+
+[node name="battlement22" parent="." index="22"]
+transform = Transform( 0, 5.22621e-07, -8.2074, -3.54345e-07, 3.1, 1.38366e-06, 4.2037, 2.6131e-07, 0, -27.1652, 2.2, -19.1669 )
+
+[node name="battlement23" parent="." index="23"]
+transform = Transform( 0, 5.22621e-07, -8.2074, -3.54345e-07, 3.1, 1.38366e-06, 4.2037, 2.6131e-07, 0, -27.1652, 2.2, -15.1669 )
+
+[node name="battlement24" parent="." index="24"]
+transform = Transform( 0, 5.22621e-07, -8.2075, -3.54354e-07, 3.1, 1.38368e-06, 4.2038, 2.6131e-07, 0, -27.1652, 2.2, -11.0669 )
+
+[node name="battlement72" parent="." index="74"]
+transform = Transform( 0, 1.30655e-07, 8.2072, 1.77168e-07, 3.1, -3.45908e-07, -4.2036, 1.30655e-07, 0, -35.5673, 2.2, -7.27623 )
+
+[node name="battlement73" parent="." index="75"]
+transform = Transform( 0, 1.30655e-07, 8.2066, 1.77152e-07, 3.1, -3.45882e-07, -4.2032, 1.30655e-07, 0, -35.5673, 2.2, -3.17623 )
+
+[node name="battlement74" parent="." index="76"]
+transform = Transform( 0, 1.30655e-07, 8.2054, 1.77131e-07, 3.1, -3.45832e-07, -4.2027, 1.30655e-07, 0, -35.5673, 2.2, 0.82377 )
+
+[node name="battlement75" parent="." index="77"]
+transform = Transform( 0, 1.30655e-07, 8.2054, 1.77131e-07, 3.1, -3.45832e-07, -4.2027, 1.30655e-07, 0, -35.5673, 2.2, 4.92377 )
+
+[node name="battlement76" parent="." index="78"]
+transform = Transform( 0, 1.30655e-07, 8.2053, 1.77126e-07, 3.1, -3.45828e-07, -4.2026, 1.30655e-07, 0, -35.5673, 2.2, 8.92377 )
+
+[node name="battlement77" parent="." index="79"]
+transform = Transform( 0, 1.30655e-07, 8.2049, 1.77118e-07, 3.1, -3.45811e-07, -4.2024, 1.30655e-07, 0, -35.5673, 2.2, 13.0238 )
+
+[node name="battlement78" parent="." index="80"]
+transform = Transform( 0, 1.30655e-07, 8.2047, 1.77114e-07, 3.1, -3.45802e-07, -4.2023, 1.30655e-07, 0, -35.5673, 2.2, 17.0238 )
+
+[node name="battlement79" parent="." index="81"]
+transform = Transform( 0, 1.30655e-07, 8.2047, 1.77114e-07, 3.1, -3.45802e-07, -4.2023, 1.30655e-07, 0, -35.5673, 2.2, 21.1238 )
+
+[node name="battlement80" parent="." index="82"]
+transform = Transform( 0, 1.30655e-07, 8.2044, 1.77109e-07, 3.1, -3.4579e-07, -4.2022, 1.30655e-07, 0, -35.5673, 2.2, 25.1238 )
+
+[node name="battlement81" parent="." index="83"]
+transform = Transform( 0, 1.30655e-07, 8.2045, 1.77109e-07, 3.1, -3.45794e-07, -4.2022, 1.30655e-07, 0, -35.5673, 2.2, 29.2238 )
+
+[node name="battlement82" parent="." index="84"]
+transform = Transform( 0, 1.30655e-07, 8.2052, 1.77122e-07, 3.1, -3.45823e-07, -4.2025, 1.30655e-07, 0, -35.5673, 2.2, 33.2238 )
+
+[node name="battlement83" parent="." index="85"]
+transform = Transform( 0, 1.30655e-07, 8.2045, 1.77114e-07, 3.1, -3.45794e-07, -4.2023, 1.30655e-07, 0, -35.5673, 2.2, 37.3238 )
+
+[node name="battlement84" parent="." index="86"]
+transform = Transform( 0, 1.30655e-07, 8.2045, 1.77109e-07, 3.1, -3.45794e-07, -4.2022, 1.30655e-07, 0, -35.5673, 2.2, 41.3238 )
+
+[node name="battlement85" parent="." index="87"]
+transform = Transform( 0, 1.30655e-07, 8.205, 1.77122e-07, 3.1, -3.45815e-07, -4.2025, 1.30655e-07, 0, -35.5673, 2.2, 45.4238 )
+
+[node name="battlement86" parent="." index="88"]
+transform = Transform( 0, 1.30655e-07, 8.205, 1.77122e-07, 3.1, -3.45815e-07, -4.2025, 1.30655e-07, 0, -35.5673, 2.2, 49.4238 )
+
+[node name="battlement87" parent="." index="89"]
+transform = Transform( 0, 1.30655e-07, 8.205, 1.77122e-07, 3.1, -3.45815e-07, -4.2025, 1.30655e-07, 0, -35.5673, 2.2, 53.5238 )
+
+[node name="battlement88" parent="." index="90"]
+transform = Transform( 0, 1.30655e-07, 8.2037, 1.77097e-07, 3.1, -3.4576e-07, -4.2019, 1.30655e-07, 0, -35.5673, 2.2, 61.6238 )
+
+[node name="battlement89" parent="." index="91"]
+transform = Transform( 0, 1.30655e-07, 8.2036, 1.77093e-07, 3.1, -3.45756e-07, -4.2018, 1.30655e-07, 0, -35.5673, 2.2, 57.6238 )
+
+[node name="battlement90" parent="." index="92"]
+transform = Transform( 0, 1.30655e-07, 8.2052, 1.77126e-07, 3.1, -3.45823e-07, -4.2026, 1.30655e-07, 0, -35.5673, 2.2, 65.7238 )
+
+[node name="battlement91" parent="." index="93"]
+transform = Transform( 0, 1.30655e-07, 8.2044, 1.77109e-07, 3.1, -3.4579e-07, -4.2022, 1.30655e-07, 0, -35.5674, 2.2, 69.7239 )
+
+[node name="battlement92" parent="." index="94"]
+transform = Transform( 0, 1.30655e-07, 8.2044, 1.77109e-07, 3.1, -3.4579e-07, -4.2022, 1.30655e-07, 0, -35.5674, 2.2, 73.8238 )
+
+[node name="battlement93" parent="." index="95"]
+transform = Transform( 0, 1.30655e-07, 8.2058, 1.77139e-07, 3.1, -3.45849e-07, -4.2029, 1.30655e-07, 0, -35.5674, 2.2, 77.8239 )
+
+[node name="battlement94" parent="." index="96"]
+transform = Transform( 0, 1.30655e-07, 8.204, 1.77097e-07, 3.1, -3.45773e-07, -4.2019, 1.30655e-07, 0, -35.5674, 2.2, 81.9239 )
+
+[node name="battlement95" parent="." index="97"]
+transform = Transform( 0, 1.30655e-07, 8.2055, 1.77131e-07, 3.1, -3.45836e-07, -4.2027, 1.30655e-07, 0, -35.5674, 2.2, 85.9239 )

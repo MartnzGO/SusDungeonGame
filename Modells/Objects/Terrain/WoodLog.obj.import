@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/WoodLog.obj-65d2547fab81de6b464e0369a7c80fd9.mesh"
+
+[deps]
+
+files=[ "res://.import/WoodLog.obj-65d2547fab81de6b464e0369a7c80fd9.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/WoodLog.obj"
+dest_files=[ "res://.import/WoodLog.obj-65d2547fab81de6b464e0369a7c80fd9.mesh", "res://.import/WoodLog.obj-65d2547fab81de6b464e0369a7c80fd9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

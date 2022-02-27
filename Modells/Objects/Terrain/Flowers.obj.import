@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Flowers.obj-9831136fa7c513c3fec23ca76d0a0609.mesh"
+
+[deps]
+
+files=[ "res://.import/Flowers.obj-9831136fa7c513c3fec23ca76d0a0609.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/Flowers.obj"
+dest_files=[ "res://.import/Flowers.obj-9831136fa7c513c3fec23ca76d0a0609.mesh", "res://.import/Flowers.obj-9831136fa7c513c3fec23ca76d0a0609.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

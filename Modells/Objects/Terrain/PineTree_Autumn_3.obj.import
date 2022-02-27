@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/PineTree_Autumn_3.obj-439c0f495de16fbeb020f86e1baf6f10.mesh"
+
+[deps]
+
+files=[ "res://.import/PineTree_Autumn_3.obj-439c0f495de16fbeb020f86e1baf6f10.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/PineTree_Autumn_3.obj"
+dest_files=[ "res://.import/PineTree_Autumn_3.obj-439c0f495de16fbeb020f86e1baf6f10.mesh", "res://.import/PineTree_Autumn_3.obj-439c0f495de16fbeb020f86e1baf6f10.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

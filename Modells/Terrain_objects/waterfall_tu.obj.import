@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/waterfall_tu.obj-f06dc729e740aa28f2b15adc2fefd38c.mesh"
+
+[deps]
+
+files=[ "res://.import/waterfall_tu.obj-f06dc729e740aa28f2b15adc2fefd38c.mesh" ]
+
+source_file="res://Modells/Terrain_objects/waterfall_tu.obj"
+dest_files=[ "res://.import/waterfall_tu.obj-f06dc729e740aa28f2b15adc2fefd38c.mesh", "res://.import/waterfall_tu.obj-f06dc729e740aa28f2b15adc2fefd38c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

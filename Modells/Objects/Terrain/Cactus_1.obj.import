@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Cactus_1.obj-85b4168aa20a7342d01acdb71d352484.mesh"
+
+[deps]
+
+files=[ "res://.import/Cactus_1.obj-85b4168aa20a7342d01acdb71d352484.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/Cactus_1.obj"
+dest_files=[ "res://.import/Cactus_1.obj-85b4168aa20a7342d01acdb71d352484.mesh", "res://.import/Cactus_1.obj-85b4168aa20a7342d01acdb71d352484.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

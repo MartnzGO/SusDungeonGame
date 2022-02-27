@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Modells/TileSets/Castle1/room-3door2.glb" type="PackedScene" id=1]
+
+[node name="room-3door2" instance=ExtResource( 1 )]
+
+[node name="SpotLight" type="SpotLight" parent="." index="96"]
+transform = Transform( 1, 0, 0, 0, 0.0941605, 0.995557, 0, -0.995557, 0.0941605, -1.23217, 6.50992, -9.26127 )
+light_color = Color( 0.862745, 0.760784, 0.368627, 1 )
+light_energy = 2.62
+shadow_enabled = true
+spot_range = 14.6

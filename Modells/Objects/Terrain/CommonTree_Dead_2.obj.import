@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/CommonTree_Dead_2.obj-532b2e8fe0932db832762a450b963fdd.mesh"
+
+[deps]
+
+files=[ "res://.import/CommonTree_Dead_2.obj-532b2e8fe0932db832762a450b963fdd.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/CommonTree_Dead_2.obj"
+dest_files=[ "res://.import/CommonTree_Dead_2.obj-532b2e8fe0932db832762a450b963fdd.mesh", "res://.import/CommonTree_Dead_2.obj-532b2e8fe0932db832762a450b963fdd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

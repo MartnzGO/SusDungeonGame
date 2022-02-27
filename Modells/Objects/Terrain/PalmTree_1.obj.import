@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/PalmTree_1.obj-b4f41ccad426e7a08f4c560a5d0b5165.mesh"
+
+[deps]
+
+files=[ "res://.import/PalmTree_1.obj-b4f41ccad426e7a08f4c560a5d0b5165.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/PalmTree_1.obj"
+dest_files=[ "res://.import/PalmTree_1.obj-b4f41ccad426e7a08f4c560a5d0b5165.mesh", "res://.import/PalmTree_1.obj-b4f41ccad426e7a08f4c560a5d0b5165.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/CommonTree_Dead_Snow_4.obj-ef0fb6cca916396ae368b057450ff34b.mesh"
+
+[deps]
+
+files=[ "res://.import/CommonTree_Dead_Snow_4.obj-ef0fb6cca916396ae368b057450ff34b.mesh" ]
+
+source_file="res://Modells/Objects/Terrain/CommonTree_Dead_Snow_4.obj"
+dest_files=[ "res://.import/CommonTree_Dead_Snow_4.obj-ef0fb6cca916396ae368b057450ff34b.mesh", "res://.import/CommonTree_Dead_Snow_4.obj-ef0fb6cca916396ae368b057450ff34b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
