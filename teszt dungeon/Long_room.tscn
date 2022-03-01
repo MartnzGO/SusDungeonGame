@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://teszt dungeon/Long_room.glb" type="PackedScene" id=1]
+[ext_resource path="res://addons/Map Generator Testing Ground/modular_room.gd" type="Script" id=2]
+[ext_resource path="res://addons/Map Generator Testing Ground/modular_room_exit.gd" type="Script" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 5.48963, 2.00147, 12.0258 )
+
+[node name="Long_room" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="exit" type="Spatial" parent="." index="544"]
+script = ExtResource( 3 )
+
+[node name="exit2" type="Spatial" parent="." index="545"]
+script = ExtResource( 3 )
+
+[node name="space" type="Area" parent="." index="546"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.743876, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="space" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00932646, 1.23931, 0.516625 )
+shape = SubResource( 1 )
