@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Modells/Target Dummy v1.0 - Life Sized.glb" type="PackedScene" id=1]
+
+[node name="Target Dummy v10 - Life Sized" instance=ExtResource( 1 )]

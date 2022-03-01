@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Modells/Spatial.gd" type="Script" id=1]
+[ext_resource path="res://Player/player_mesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Modells/Camera.gd" type="Script" id=3]
+[ext_resource path="res://Player/Spells/glyph/glyph.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.517901
+
+[node name="Spatial" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.0430266, 0.999074, 0, -0.999074, 0.0430266, 0.147983, 7.4859, 1.2211 )
+shape = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.773098, 0.463658, -0.432829, 0.0547038, 0.631105, 0.773766, 0.631924, -0.621874, 0.462542, -9.96111, 20.725, 13.9669 )
+far = 150.0
+script = ExtResource( 3 )
+
+[node name="Skills" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00708, 0 )
+
+[node name="Q" type="Spatial" parent="Skills"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494705, 0 )
+
+[node name="scene" parent="Skills/Q" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, -0.0121123, 0.999926, 0, -0.999926, -0.0121123, 0, 0.161574, 0 )
+visible = false
+
+[node name="W" type="Spatial" parent="Skills"]
+
+[node name="E" type="Spatial" parent="Skills"]
+
+[node name="R" type="Spatial" parent="Skills"]
+
+[node name="Space" type="Spatial" parent="Skills"]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0557404, 0, 0, 0, 0.0557404, 0, 0, 0, 0.0557404, 0, 4.99096, 0 )

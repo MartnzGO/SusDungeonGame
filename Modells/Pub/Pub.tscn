@@ -1,0 +1,416 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Modells/Pub/bed/scene.gltf" type="PackedScene" id=1]
+[ext_resource path="res://Modells/Pub/stool/scene.gltf" type="PackedScene" id=2]
+[ext_resource path="res://Modells/Pub/beer/scene.gltf" type="PackedScene" id=3]
+[ext_resource path="res://Modells/Pub/shot/scene.gltf" type="PackedScene" id=4]
+[ext_resource path="res://Modells/Pub/Pub.glb" type="PackedScene" id=5]
+[ext_resource path="res://Modells/Pub/card deck/scene.gltf" type="PackedScene" id=6]
+[ext_resource path="res://Modells/Pub/Drinks/Drink5.glb" type="PackedScene" id=7]
+[ext_resource path="res://Modells/Pub/Drinks/Drink2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Modells/Pub/Lamp/scene.gltf" type="PackedScene" id=9]
+[ext_resource path="res://Modells/Pub/Drinks/Drink4.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Fire.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Modells/Pub/tablefoot/table football_glbt.glb" type="PackedScene" id=12]
+[ext_resource path="res://Modells/Pub/Drinks/Drink3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Modells/Pub/Npcs/sitting1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Modells/Pub/Npcs/sitting2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Modells/Pub/Npcs/stranger.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Modells/Pub/Npcs/guitar.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Modells/Pub/Npcs/Bartender.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Modells/Pub/Npcs/drunk.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Modells/Pub/Npcs/wamen.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Modells/Pub/Npcs/Új mappa/Riff.mp3" type="AudioStream" id=21]
+[ext_resource path="res://Modells/FireToon.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Modells/Door.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Modells/Pub/Npcs/Új mappa/John_Bartmann_-_03_-_Bouncy_Gypsy_Beats.mp3" type="AudioStream" id=24]
+[ext_resource path="res://Modells/Pub/AudioStreamPlayer3D.gd" type="Script" id=25]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.1, 0.35, 0.5, -0.1, 0.25, 0.5, -0.1, 0.35, -0.5, -0.1, 0.25, -0.5, 0.1, 0.25, 0.5, 0.1, 0.35, 0.5, 0.1, 0.25, -0.5, 0.1, 0.35, -0.5, -0.15, 0, -0.5, -0.15, 0, 0.5, 0.15, 0, -0.5, 0.15, 0, 0.5, -0.15, 0.2, 0.5, -0.15, 0, 0.5, -0.15, 0.2, -0.5, -0.15, 0, -0.5, 0.15, 0, 0.5, -0.15, 0, 0.5, 0.15, 0.2, 0.5, -0.15, 0.2, 0.5, 0.1, 0.25, 0.5, -0.1, 0.25, 0.5, 0.1, 0.35, 0.5, -0.1, 0.35, 0.5, 0.15, 0.2, 0.5, 0.15, 0.2, -0.5, 0.15, 0, 0.5, 0.15, 0, -0.5, -0.15, 0, -0.5, 0.15, 0, -0.5, -0.15, 0.2, -0.5, 0.15, 0.2, -0.5, -0.1, 0.25, -0.5, 0.1, 0.25, -0.5, -0.1, 0.35, -0.5, 0.1, 0.35, -0.5, 0.1, 0.25, 0.5, 0.1, 0.25, -0.5, 0.15, 0.2, 0.5, 0.15, 0.2, -0.5, -0.15, 0.2, 0.5, -0.15, 0.2, -0.5, -0.1, 0.25, 0.5, -0.1, 0.25, -0.5, -0.1, 0.825, -0.5, 0.1, 0.825, -0.5, -0.125, 0.9, -0.5, 0.125, 0.9, -0.5, -0.125, 1, -0.5, 0.125, 1, -0.5, -0.1, 0.825, 0.5, -0.125, 0.9, 0.5, 0.1, 0.825, 0.5, 0.125, 0.9, 0.5, 0.125, 1, 0.5, -0.125, 1, 0.5, -0.125, 0.9, 0.5, -0.1, 0.825, 0.5, -0.125, 0.9, -0.5, -0.1, 0.825, -0.5, 0.1, 0.825, 0.5, 0.125, 0.9, 0.5, 0.1, 0.825, -0.5, 0.125, 0.9, -0.5, -0.125, 1, 0.5, -0.125, 1, -0.5, 0.125, 1, 0.5, 0.125, 1, -0.5, 0.125, 0.9, 0.5, 0.125, 1, 0.5, 0.125, 0.9, -0.5, 0.125, 1, -0.5, -0.125, 1, 0.5, -0.125, 0.9, 0.5, -0.125, 1, -0.5, -0.125, 0.9, -0.5, -0.1, 0.825, 0.5, -0.1, 0.825, -0.5, 0.1, 0.825, 0.5, 0.1, 0.825, -0.5, -0.1, 0.35, 0.5, -0.1, 0.25, 0.5, -0.1, 0.35, -0.5, -0.1, 0.25, -0.5, 0.1, 0.25, 0.5, 0.1, 0.35, 0.5, 0.1, 0.25, -0.5, 0.1, 0.35, -0.5, -0.15, 0, -0.5, -0.15, 0, 0.5, 0.15, 0, -0.5, 0.15, 0, 0.5, -0.15, 0.2, 0.5, -0.15, 0, 0.5, -0.15, 0.2, -0.5, -0.15, 0, -0.5, 0.15, 0, 0.5, -0.15, 0, 0.5, 0.15, 0.2, 0.5, -0.15, 0.2, 0.5, 0.1, 0.25, 0.5, -0.1, 0.25, 0.5, 0.1, 0.35, 0.5, -0.1, 0.35, 0.5, 0.15, 0.2, 0.5, 0.15, 0.2, -0.5, 0.15, 0, 0.5, 0.15, 0, -0.5, -0.15, 0, -0.5, 0.15, 0, -0.5, -0.15, 0.2, -0.5, 0.15, 0.2, -0.5, -0.1, 0.25, -0.5, 0.1, 0.25, -0.5, -0.1, 0.35, -0.5, 0.1, 0.35, -0.5, 0.1, 0.25, 0.5, 0.1, 0.25, -0.5, 0.15, 0.2, 0.5, 0.15, 0.2, -0.5, -0.15, 0.2, 0.5, -0.15, 0.2, -0.5, -0.1, 0.25, 0.5, -0.1, 0.25, -0.5, -0.1, 0.825, -0.5, 0.1, 0.825, -0.5, -0.125, 0.9, -0.5, 0.125, 0.9, -0.5, -0.125, 1, -0.5, 0.125, 1, -0.5, -0.1, 0.825, 0.5, -0.125, 0.9, 0.5, 0.1, 0.825, 0.5, 0.125, 0.9, 0.5, 0.125, 1, 0.5, -0.125, 1, 0.5, -0.125, 0.9, 0.5, -0.1, 0.825, 0.5, -0.125, 0.9, -0.5, -0.1, 0.825, -0.5, 0.1, 0.825, 0.5, 0.125, 0.9, 0.5, 0.1, 0.825, -0.5, 0.125, 0.9, -0.5, -0.125, 1, 0.5, -0.125, 1, -0.5, 0.125, 1, 0.5, 0.125, 1, -0.5, 0.125, 0.9, 0.5, 0.125, 1, 0.5, 0.125, 0.9, -0.5, 0.125, 1, -0.5, -0.125, 1, 0.5, -0.125, 0.9, 0.5, -0.125, 1, -0.5, -0.125, 0.9, -0.5, -0.1, 0.825, 0.5, -0.1, 0.825, -0.5, 0.1, 0.825, 0.5, 0.1, 0.825, -0.5 )
+
+[node name="Pub" instance=ExtResource( 5 )]
+
+[node name="wall_diagonal" parent="." index="8"]
+transform = Transform( 1, 0, 0, 0, 3.1, 0, 0, 0, 4.2, -16, -0.78307, -13.6 )
+
+[node name="wall_slope" parent="." index="11"]
+transform = Transform( 0, 3.03457e-07, -1.5, -2.52889e-07, 1.8, 2.52881e-07, 3.0001, 1.51729e-07, 0, -15.2187, 0.544782, -17.325 )
+
+[node name="furniture_table" parent="." index="13"]
+transform = Transform( 0.989513, 3.1869e-07, -1.38234, -2.12594e-07, 1.7, 2.39744e-07, 1.38234, 3.33216e-08, 0.989513, -12.7178, 2.86102e-06, -12.7591 )
+
+[node name="furniture_table3" parent="." index="22"]
+transform = Transform( 1.7, 0, 0, 0, 1.7, 0, 0, 0, 1.7, 0.345009, -0.00913388, -16.1775 )
+
+[node name="wall9" parent="." index="41"]
+transform = Transform( 1, 0, 0, 0, 3.2, 0, 0, 0, 9.9, -16, 1.75882, -6.75 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="63"]
+transform = Transform( 0, 3.1391e-07, -9.5502, -8.42937e-08, 1.862, 1.61004e-06, 1, 1.56955e-07, 0, -1.675, 3.57628e-07, -20.3 )
+shape = SubResource( 1 )
+
+[node name="doorway_doorWood" parent="." index="64"]
+transform = Transform( -1.3, 2.06113e-07, 1.78343e-07, 1.54972e-07, 1.729, 3.05989e-08, -1.37187e-07, 3.1305e-08, -1.69, -7, -5.38021, -19.4689 )
+
+[node name="doorway_doorSolid4" parent="." index="72"]
+transform = Transform( -2.5, 2.98023e-07, 2.63822e-07, 2.98023e-07, 2.5, 4.52646e-08, -2.63822e-07, 4.52646e-08, -2.5, -14.6212, -0.821599, -6.50149 )
+
+[node name="Group16" parent="doorway_doorSolid4" index="0"]
+transform = Transform( -4.37112e-10, 3.49156e-10, 0.01, 1.81058e-10, 0.01, -3.49156e-10, -0.01, 1.81058e-10, -4.37112e-10, -2.02404, -0.973425, 4.83385 )
+
+[node name="scene" parent="doorway_doorSolid4/Group16" index="0" instance=ExtResource( 6 )]
+transform = Transform( 1, -8.47033e-22, 0, 0, 1, 7.10543e-15, 0, -7.10543e-15, 1, -4.14428, -1.22897, -4.12107 )
+
+[node name="Door" parent="doorway_doorSolid4" index="1" instance=ExtResource( 23 )]
+transform = Transform( -0.999975, 2.38544e-07, -0.00708588, 2.38287e-07, 1, 3.70559e-08, 0.00708588, 3.53665e-08, -0.999975, 0.0110149, 1.58139, 0.0429575 )
+
+[node name="Door2" parent="doorway_doorSolid4" index="2" instance=ExtResource( 23 )]
+transform = Transform( -0.999975, 1.95949e-07, -0.00708588, 1.95692e-07, 0.642688, 3.05865e-08, 0.00708588, 2.88971e-08, -0.999975, -2.99039, 0.426345, 5.03696 )
+
+[node name="furniture_stool22" parent="." index="81"]
+transform = Transform( 1.73205, 3.60869e-07, 1, -3.30015e-07, 2, -1.50135e-07, -1, -3.49873e-08, 1.73205, -13.2446, 0.00529218, -12.2528 )
+
+[node name="furniture_stool23" parent="." index="82"]
+transform = Transform( 0, 8.42937e-08, 2, 8.42938e-08, 2, -8.42938e-08, -2, 8.42937e-08, 0, 0.2983, -5.96046e-08, -15.1497 )
+
+[node name="porch_floorCenter2" parent="." index="97"]
+transform = Transform( 19.032, 0, 0, 0, 1, 0, 0, 0, 9.68, -6.36858, 9.53674e-07, -15.5623 )
+
+[node name="scene" parent="." index="98" instance=ExtResource( 1 )]
+transform = Transform( -0.199818, 0, 0.00853555, 0, 0.2, 0, -0.00853555, 0, -0.199818, -9.48375, 3.38759, -3.61841 )
+
+[node name="scene2" parent="." index="99" instance=ExtResource( 1 )]
+transform = Transform( -0.199818, 0, 0.00853555, 0, 0.2, 0, -0.00853555, 0, -0.199818, -3.60195, 3.38759, -3.61841 )
+
+[node name="scene3" parent="." index="100" instance=ExtResource( 1 )]
+transform = Transform( -0.199998, 0, -0.000788899, 0, 0.2, 0, 0.000788899, 0, -0.199998, -0.778867, 3.38759, -3.61841 )
+
+[node name="scene4" parent="." index="101" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76666, 0.123126, -15.0239 )
+
+[node name="scene5" parent="." index="102" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08215, 0.123126, -15.0239 )
+
+[node name="scene6" parent="." index="103" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.52658, 0.123126, -15.0239 )
+
+[node name="scene7" parent="." index="104" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8309, 0.123126, -15.0239 )
+
+[node name="scene8" parent="." index="105" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8309, 0.123126, -15.0239 )
+
+[node name="scene9" parent="." index="106" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57727, 0.123126, -15.0239 )
+
+[node name="scene10" parent="." index="107" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -3.82776, 1.00619, -14.3857 )
+
+[node name="scene11" parent="." index="108" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -3.84732, 1.00619, -14.3555 )
+
+[node name="scene12" parent="." index="109" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -3.89379, 1.00619, -14.3859 )
+
+[node name="scene15" parent="." index="110" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5.86614, 1.00619, -14.3859 )
+
+[node name="scene16" parent="." index="111" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5.86614, 1.00619, -14.2679 )
+
+[node name="scene17" parent="." index="112" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5.99673, 1.00619, -14.2679 )
+
+[node name="scene18" parent="." index="113" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.24609, 1.00619, -14.2679 )
+
+[node name="scene19" parent="." index="114" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.36556, 1.00619, -14.2679 )
+
+[node name="scene20" parent="." index="115" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.82611, 0.626408, -17.4543 )
+
+[node name="scene21" parent="." index="116" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.82611, 0.626408, -17.4963 )
+
+[node name="scene22" parent="." index="117" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.89599, 0.626408, -17.4963 )
+
+[node name="scene23" parent="." index="118" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.89599, 0.626408, -17.5434 )
+
+[node name="scene24" parent="." index="119" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.84744, 0.626408, -17.5434 )
+
+[node name="scene25" parent="." index="120" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -8.79692, 0.626408, -17.5819 )
+
+[node name="scene13" parent="." index="121" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -3.89379, 1.00619, -14.3523 )
+
+[node name="scene14" parent="." index="122" instance=ExtResource( 4 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -3.94172, 1.00739, -14.3186 )
+
+[node name="scene26" parent="." index="123" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11438, 0.100001, -16.5649 )
+
+[node name="scene27" parent="." index="124" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -6.27927, 0.641085, -18.5532 )
+
+[node name="scene28" parent="." index="125" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -5.68751, 0.623433, -19.2735 )
+
+[node name="scene29" parent="." index="126" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -8.82341, 0.61843, -18.4479 )
+
+[node name="scene30" parent="." index="127" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -12.5101, 0.641085, -16.3607 )
+
+[node name="scene31" parent="." index="128" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -12.9425, 0.621527, -12.6866 )
+
+[node name="scene32" parent="." index="129" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 0.575387, 0.621527, -15.9621 )
+
+[node name="scene33" parent="." index="130" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 0.0332158, 0.621527, -16.5227 )
+
+[node name="scene34" parent="." index="131" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -2.00986, 1.01535, -14.1185 )
+
+[node name="scene35" parent="." index="132" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -4.54879, 0.99932, -13.8197 )
+
+[node name="scene36" parent="." index="133" instance=ExtResource( 3 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -6.5926, 1.00098, -14.3824 )
+
+[node name="Spatial11" parent="." index="134" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -12.859, 4.80058, -2.12361 )
+
+[node name="scene" parent="Spatial11" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00842285, 0.0376272, 0.0748901 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial11" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.392807, 0, -4.47044 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 10.81
+shadow_enabled = true
+
+[node name="Spatial12" parent="." index="135" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -5.51249, 4.80058, -2.07937 )
+
+[node name="scene" parent="Spatial12" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -0.064785, 0.0376282, 0.0614491 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial12" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.124599, 0, -5.22086 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 10.81
+shadow_enabled = true
+
+[node name="Spatial13" parent="." index="136" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.512623, 4.80058, -2.07342 )
+
+[node name="scene" parent="Spatial13" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00842285, 0.0376272, 0.0748901 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial13" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -1.38366, 0, -3.7544 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 10.81
+shadow_enabled = true
+
+[node name="Spatial14" parent="." index="137" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.512623, 4.80058, -11.3533 )
+
+[node name="scene" parent="Spatial14" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00842285, 0.0376272, 0.0748901 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial14" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -1.4031, 0, 4.56821 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 10.81
+shadow_enabled = true
+
+[node name="Spatial15" parent="." index="138" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -8.17661, 4.80058, -11.3946 )
+
+[node name="scene" parent="Spatial15" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00842285, 0.0376272, 0.0748901 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial15" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0460281, 0, 3.30779 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 10.81
+shadow_enabled = true
+
+[node name="Spatial7" parent="." index="139" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -10.9654, 1.28226, -20.1555 )
+
+[node name="scene" parent="Spatial7" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00842285, 0.0376272, 0.0748901 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial7" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.400871, 0, 2.31287 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 10.81
+shadow_enabled = true
+
+[node name="Spatial8" parent="." index="140" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -4.4584, 1.28226, -20.1377 )
+
+[node name="scene" parent="Spatial8" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00842285, 0.0376272, 0.0748901 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial8" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.228951, 0, 2.50719 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 10.81
+shadow_enabled = true
+
+[node name="Spatial10" parent="." index="141" instance=ExtResource( 11 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -6.55443, 4.24278, -11.609 )
+
+[node name="scene" parent="Spatial10" index="1" instance=ExtResource( 9 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0.00842285, 0.0376272, 0.0748901 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial10" index="2"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.227966, 0, -2.22279 )
+light_color = Color( 0.768627, 0.596078, 0.270588, 1 )
+light_energy = 13.39
+shadow_enabled = true
+
+[node name="OmniLight" type="OmniLight" parent="." index="142"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12316, 0.866838, -16.7196 )
+light_color = Color( 0.854902, 0.627451, 0.235294, 1 )
+light_energy = 3.23
+light_indirect_energy = 3.06
+light_specular = 0.88
+shadow_enabled = true
+shadow_color = Color( 0.180392, 0.164706, 0.14902, 1 )
+omni_range = 7.8
+omni_attenuation = 1.86606
+
+[node name="table football_glbt" parent="." index="143" instance=ExtResource( 12 )]
+transform = Transform( 0.0505085, 0, 0.086307, 0, 0.1, 0, -0.086307, 0, 0.0505085, -2.33113, -0.515075, -18.9161 )
+
+[node name="Drink5" parent="." index="144" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -16.0918, -3.22936, -16.8069 )
+
+[node name="Drink6" parent="." index="145" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -14.3899, -3.22936, -16.8069 )
+
+[node name="Drink7" parent="." index="146" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -12.0757, -3.22936, -16.8069 )
+
+[node name="Drink8" parent="." index="147" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -10.6683, -3.22936, -16.8069 )
+
+[node name="Drink9" parent="." index="148" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -11.4507, -2.52333, -16.8069 )
+
+[node name="Drink10" parent="." index="149" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -14.5671, -2.52333, -16.8069 )
+
+[node name="Drink11" parent="." index="150" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -14.5671, -1.81317, -16.8069 )
+
+[node name="Drink12" parent="." index="151" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -12.367, -1.81317, -16.8069 )
+
+[node name="Drink13" parent="." index="152" instance=ExtResource( 7 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.965, -10.401, -1.81317, -16.8069 )
+
+[node name="Drink2" parent="." index="153" instance=ExtResource( 8 )]
+transform = Transform( 0.377529, 0, 0, 0, 0.278942, 0, 0, 0, 0.363734, -6.29587, 0.906933, -11.4136 )
+
+[node name="Drink3" parent="." index="154" instance=ExtResource( 8 )]
+transform = Transform( 0.377529, 0, 0, 0, 0.278942, 0, 0, 0, 0.363734, -4.34681, 0.316751, -11.4136 )
+
+[node name="Drink4" parent="." index="155" instance=ExtResource( 8 )]
+transform = Transform( 0.377529, 0, 0, 0, 0.278942, 0, 0, 0, 0.363734, -8.36554, 0.316751, -11.4136 )
+
+[node name="Drink14" parent="." index="156" instance=ExtResource( 8 )]
+transform = Transform( 0.377529, 0, 0, 0, 0.278942, 0, 0, 0, 0.363734, -8.36554, 2.40654, -11.4136 )
+
+[node name="Drink3" parent="Drink14" index="1" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.62374, -1.17564, -1.53746 )
+
+[node name="Drink4" parent="Drink14" index="2" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.67234, -1.22955, -1.39982 )
+
+[node name="Drink15" parent="." index="157" instance=ExtResource( 10 )]
+transform = Transform( 0.333381, 0, 0, 0, 0.2612, 0, 0, 0, 0.261171, -3.50277, 1.78148, -11.2918 )
+
+[node name="Drink16" parent="." index="158" instance=ExtResource( 10 )]
+transform = Transform( 0.333381, 0, 0, 0, 0.2612, 0, 0, 0, 0.261171, -4.12482, 2.46568, -11.2918 )
+
+[node name="Drink17" parent="." index="159" instance=ExtResource( 10 )]
+transform = Transform( 0.333381, 0, 0, 0, 0.2612, 0, 0, 0, 0.261171, -6.24785, 2.46568, -11.2918 )
+
+[node name="Drink18" parent="." index="160" instance=ExtResource( 10 )]
+transform = Transform( 0.333381, 0, 0, 0, 0.2612, 0, 0, 0, 0.261171, -6.24785, 0.469595, -11.2918 )
+
+[node name="Drink19" parent="." index="161" instance=ExtResource( 10 )]
+transform = Transform( 0.333381, 0, 0, 0, 0.2612, 0, 0, 0, 0.261171, -6.81703, 1.04575, -11.3832 )
+
+[node name="Drink20" parent="." index="162" instance=ExtResource( 10 )]
+transform = Transform( 0.333381, 0, 0, 0, 0.2612, 0, 0, 0, 0.261171, -7.98259, 1.05324, -11.3832 )
+
+[node name="Bartender" parent="." index="163" instance=ExtResource( 18 )]
+transform = Transform( -0.00998288, 0, -0.000584875, 0, 0.01, 0, 0.000584875, 0, -0.00998288, -5, 0.218305, -12.7138 )
+
+[node name="drunk" parent="." index="164" instance=ExtResource( 19 )]
+transform = Transform( 0.00221974, 0, 0.00975052, 0, 0.01, 0, -0.00975052, 0, 0.00221974, -15.4397, 0.0295234, -17.3643 )
+
+[node name="guitar" parent="." index="165" instance=ExtResource( 17 )]
+transform = Transform( -0.00861345, 0, -0.00508019, 0, 0.01, 0, 0.00508019, 0, -0.00861345, 1.38114, 0.0914741, -12.7138 )
+
+[node name="sitting1" parent="." index="166" instance=ExtResource( 14 )]
+transform = Transform( 9.42469e-06, 0, 0.00999999, 0, 0.01, 0, -0.00999999, 0, 9.42469e-06, -10.2313, 0.0605466, -17.932 )
+
+[node name="sitting3" parent="." index="167" instance=ExtResource( 14 )]
+transform = Transform( -0.00930788, 0, -0.00365559, 0, 0.01, 0, 0.00365559, 0, -0.00930788, 0.264318, 0.0605466, -15.2419 )
+
+[node name="sitting2" parent="." index="168" instance=ExtResource( 15 )]
+transform = Transform( 0.00982826, 0, 0.00184535, 0, 0.01, 0, -0.00184535, 0, 0.00982826, 0.264192, -0.0600195, -16.7152 )
+
+[node name="sitting4" parent="." index="169" instance=ExtResource( 15 )]
+transform = Transform( 0.00175023, 0, -0.00984564, 0, 0.01, 0, 0.00984564, 0, 0.00175023, -8.08667, -0.0600195, -17.3487 )
+
+[node name="stranger" parent="." index="170" instance=ExtResource( 16 )]
+transform = Transform( -0.00620039, 0, 0.00784568, 0, 0.01, 0, -0.00784568, 0, -0.00620039, -13.3919, -0.0285253, -12.1934 )
+
+[node name="wamen" parent="." index="171" instance=ExtResource( 20 )]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -4.13222, -0.0158451, -14.7428 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="172"]
+transform = Transform( 0.547008, 0, 0.837128, 0, 1, 0, -0.837128, 0, 0.547008, 1.03655, 1.20695, -13.039 )
+stream = ExtResource( 21 )
+unit_db = 1.0
+unit_size = 8.0
+autoplay = true
+emission_angle_enabled = true
+emission_angle_degrees = 83.0
+emission_angle_filter_attenuation_db = -5.0
+attenuation_filter_cutoff_hz = 20500.0
+attenuation_filter_db = -20.0
+script = ExtResource( 25 )
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." index="173"]
+transform = Transform( 0.547008, 0, 0.837128, 0, 1, 0, -0.837128, 0, 0.547008, 1.03655, 1.20695, -13.039 )
+stream = ExtResource( 24 )
+unit_db = 1.0
+unit_size = 8.0
+emission_angle_enabled = true
+emission_angle_degrees = 83.0
+emission_angle_filter_attenuation_db = -5.0
+attenuation_filter_cutoff_hz = 20500.0
+attenuation_filter_db = -20.0
+
+[node name="Fire" parent="." index="174" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62496, 0.246791, -16.6598 )
+visibility_aabb = AABB( -4.30371, -4.01123, -4, 8, 8, 8 )
+
+[connection signal="finished" from="AudioStreamPlayer3D" to="AudioStreamPlayer3D" method="_on_AudioStreamPlayer3D_finished"]

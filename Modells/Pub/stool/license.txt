@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bar Stool
+* source:	https://sketchfab.com/3d-models/bar-stool-eddf350940cd41e986a6b9a788633523
+* author:	FinnyInTheBinny (https://sketchfab.com/FinnyInTheBinny)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bar Stool" (https://sketchfab.com/3d-models/bar-stool-eddf350940cd41e986a6b9a788633523) by FinnyInTheBinny (https://sketchfab.com/FinnyInTheBinny) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

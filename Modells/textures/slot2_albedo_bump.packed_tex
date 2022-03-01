@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 1024,
+	"src": {
+		"a": "res://jojo/data01_n.jpg",
+		"rgb": "res://jojo/debris01_z.png"
+	}
+}

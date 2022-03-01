@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/Player.glb" type="PackedScene" id=1]
+
+[node name="Player" instance=ExtResource( 1 )]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0 )
+
+[node name="BoneAttachment" type="BoneAttachment" parent="metarig/Skeleton" index="1"]
+transform = Transform( -0.941681, -0.282098, 0.183459, 0.31933, -0.921084, 0.222782, 0.106135, 0.268374, 0.95745, -0.410193, 1.09317, 0.0492992 )
+bone_name = "hand.R"

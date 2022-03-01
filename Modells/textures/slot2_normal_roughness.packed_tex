@@ -1,0 +1,8 @@
+{
+	"contains_albedo": false,
+	"resolution": 1024,
+	"src": {
+		"a": "res://jojo/snow01_z.png",
+		"rgb": "res://jojo/debris01_n.png"
+	}
+}

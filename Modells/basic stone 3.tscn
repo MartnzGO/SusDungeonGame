@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Modells/ROCK.tres" type="Material" id=1]
+[ext_resource path="res://Modells/basic stone 3.glb" type="PackedScene" id=2]
+
+[node name="basic stone 3" instance=ExtResource( 2 )]
+
+[node name="group1988159041" parent="." index="0"]
+material/0 = ExtResource( 1 )
+
+[node name="group337471551" parent="." index="1"]
+material/0 = ExtResource( 1 )
+
+[node name="group765248285" parent="." index="2"]
+material/0 = ExtResource( 1 )

@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "res://Modells/Kenney/Textures/vcpnffas_4K_Displacement.jpg",
+		"rgb": "res://Modells/Kenney/Textures/vcpnffas_4K_Albedo.jpg"
+	}
+}

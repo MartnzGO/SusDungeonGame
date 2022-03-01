@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Riff.mp3-ff0e977cb60d278b8f47b2e083e64c3c.mp3str"
+
+[deps]
+
+source_file="res://Modells/Pub/Npcs/Új mappa/Riff.mp3"
+dest_files=[ "res://.import/Riff.mp3-ff0e977cb60d278b8f47b2e083e64c3c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

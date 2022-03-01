@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.108828, 0.277599, 0.844238, 1, 0.696693, 0.716602, 0.730957, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 25, 2, 25 )
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( 0, 0, 0 )
+angular_velocity_random = 0.06
+radial_accel = 0.1
+angle = 67.0
+angle_random = 1.0
+color_ramp = SubResource( 2 )
+hue_variation = 0.28
+hue_variation_random = 0.4
+anim_speed = 11.91
+
+[sub_resource type="SphereMesh" id=4]
+radius = 0.019
+height = 0.013
+radial_segments = 4
+rings = 96
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Particles" type="Particles" parent="."]
+amount = 500
+lifetime = 10.0
+explosiveness = 1.0
+visibility_aabb = AABB( -3.15308, -2.89854, -3.07691, 6.30616, 5.79709, 6.15479 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )
