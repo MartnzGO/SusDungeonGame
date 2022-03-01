@@ -465,9 +465,6 @@ tracks/64/keys = PoolRealArray( 0, 1, 0, 0, 0, -7.45058e-09, -4.65661e-10, 3.725
 
 [node name="guitar" instance=ExtResource( 1 )]
 
-[node name="Skeleton" parent="Armature" index="0"]
-bones/34/bound_children = [ NodePath("BoneAttachment") ]
-
 [node name="BoneAttachment" type="BoneAttachment" parent="Armature/Skeleton" index="1"]
 transform = Transform( 0.436857, 0.442894, 0.782944, -0.229758, 0.896459, -0.378909, -0.869694, -0.0143586, 0.493383, -1968.78, 2527.54, -10893.5 )
 bone_name = "mixamorig_RightHand"
