@@ -1,5 +1,5 @@
 extends Navigation
-const SPEED = 24
+var SPEED = 24
 var path = []
 var mouse_pos
 # Declare member variables here. Examples:

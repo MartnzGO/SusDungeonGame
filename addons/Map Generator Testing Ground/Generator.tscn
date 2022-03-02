@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://addons/Map Generator Testing Ground/generator.gd" type="Script" id=1]
+[ext_resource path="res://teszt dungeon/Long_room.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/TileSets/Dungeon1/corridor-L.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/TileSets/Dungeon1/bridge-room.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/TileSets/Dungeon1/corridor-short.tscn" type="PackedScene" id=7]
@@ -21,8 +22,10 @@ use_physics_engine = false
 visible = false
 
 [node name="room_start" parent="DungeonGenerator/rooms" instance=ExtResource( 8 )]
+probability = 0
 
 [node name="bridge-room" parent="DungeonGenerator/rooms" instance=ExtResource( 6 )]
+probability = 0
 
 [node name="corridor-L" parent="DungeonGenerator/rooms" instance=ExtResource( 5 )]
 is_room = false
@@ -34,8 +37,10 @@ is_room = false
 is_room = false
 
 [node name="threedoor-room" parent="DungeonGenerator/rooms" instance=ExtResource( 10 )]
+probability = 0
 
 [node name="fourdoor-room" parent="DungeonGenerator/rooms" instance=ExtResource( 11 )]
+probability = 0
 
 [node name="corridor_joint" parent="DungeonGenerator/rooms" instance=ExtResource( 13 )]
 is_room = false
@@ -43,5 +48,61 @@ is_room = false
 [node name="Birch_exit" parent="DungeonGenerator/rooms" instance=ExtResource( 12 )]
 is_room = false
 
+[node name="Long_room" parent="DungeonGenerator/rooms" instance=ExtResource( 2 )]
+probability = 10
+
 [node name="objects" type="Spatial" parent="DungeonGenerator"]
 visible = false
+
+[node name="generated" type="Spatial" parent="DungeonGenerator"]
+
+[node name="room_start" parent="DungeonGenerator/generated" instance=ExtResource( 8 )]
+probability = 0
+
+[node name="corridor-L" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84645, 0.02504, 15.9055 )
+is_room = false
+
+[node name="corridor_joint" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.1904, 1.01229, 14.5286 )
+is_room = false
+
+[node name="corridor-short" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.6664, 0.00991809, 16.6736 )
+is_room = false
+
+[node name="corridor_joint2" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.9938, 1.01229, 14.4181 )
+is_room = false
+
+[node name="corridor-L2" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.497, 0.00991809, 16.57 )
+is_room = false
+
+[node name="corridor_joint3" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1201, 0.997166, 8.22604 )
+is_room = false
+
+[node name="corridor-L3" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.2719, -0.0052039, 0.722838 )
+is_room = false
+
+[node name="corridor_joint4" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.928, 0.982044, -1.2002 )
+is_room = false
+
+[node name="corridor-L4" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.584, -0.0052039, 0.176759 )
+is_room = false
+
+[node name="corridor_joint5" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15.7359, 0.997166, -7.32644 )
+is_room = false
+
+[node name="corridor-L5" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.5878, -0.0052039, -14.8296 )
+is_room = false
+
+[node name="Long_room" parent="DungeonGenerator/generated" instance=ExtResource( 2 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 6.128, 0.0906491, -13.4527 )
+probability = 10

@@ -9,6 +9,7 @@ var activated = false
 func activate():
 	activated = true
 	self.visible = true
+	get_parent().get_parent().get_parent().get_parent().SPEED+=20
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,5 +23,8 @@ func _process(delta):
 	if status<0:
 		activated = false
 		self.visible = false
+		get_parent().get_parent().get_parent().get_parent().SPEED-=20
 		status = 10
 	pass
+
+
