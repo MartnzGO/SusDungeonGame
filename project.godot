@@ -18,20 +18,62 @@ _global_script_classes=[ {
 "class": "HTerrainDataSaver",
 "language": "GDScript",
 "path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventMultiScreenDrag",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventMultiScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenPinch",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventScreenPinch.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenTwist",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventScreenTwist.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenDrag",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventSingleScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTap",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventSingleScreenTap.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTouch",
+"language": "GDScript",
+"path": "res://CustomInputEvents/InputEventSingleScreenTouch.gd"
 } ]
 _global_script_class_icons={
 "HTerrainDataLoader": "",
-"HTerrainDataSaver": ""
+"HTerrainDataSaver": "",
+"InputEventMultiScreenDrag": "",
+"InputEventScreenPinch": "",
+"InputEventScreenTwist": "",
+"InputEventSingleScreenDrag": "",
+"InputEventSingleScreenTap": "",
+"InputEventSingleScreenTouch": ""
 }
 
 [application]
 
 config/name="sus"
+run/main_scene="res://title_screen/TitleScreen.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Map Generator Testing Ground/plugin.cfg", "res://addons/zylann.scatter/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Map Generator Testing Ground/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/zylann.scatter/plugin.cfg" )
 
 [input]
 

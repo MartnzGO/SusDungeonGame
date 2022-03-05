@@ -15,7 +15,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func _input(event):
-	if Input.is_action_just_pressed("left_click"):
+	if Input.is_action_just_pressed("left_click") and inside == true:
 		get_tree().change_scene("res://dungeon szoba/level_test.tscn")
 
 
