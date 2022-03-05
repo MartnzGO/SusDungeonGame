@@ -5,17 +5,17 @@
 [ext_resource path="res://addons/Map Generator Testing Ground/modular_room_exit.gd" type="Script" id=3]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 2.72283, 2.00147, 5.77067 )
+extents = Vector3( 5.41693, 2.00147, 11.3929 )
 
 [node name="Long_room" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
 [node name="exit" type="Spatial" parent="." index="544"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.777569, 1.02258, -11.0999 )
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.777569, 1.02258, -11.0999 )
 script = ExtResource( 3 )
 
 [node name="exit2" type="Spatial" parent="." index="545"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.825565, 0.891395, 11.9615 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14075, 0.891395, 11.9615 )
 script = ExtResource( 3 )
 
 [node name="space" type="Area" parent="." index="546"]
