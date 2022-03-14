@@ -1,19 +1,10 @@
 extends KinematicBody
 var state = ""
 var pressed_skill = ""
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func move(vector):
 	if state != "cast":
 		move_and_slide(vector)
@@ -48,9 +39,12 @@ func _process(delta):
 		print(state)
 		state=""
 		$Player/AnimationPlayer.play("BreathingIdle")
+	if $Player/Mana.current < $Player/Mana.max_amount:
+		$Player/Mana.current = $Player/Mana.current+0.05
+	
 	pass
-	
-	
+
+
 func idle():
 	if state != "cast":
 		$Player/AnimationPlayer.play("BreathingIdle")
@@ -59,8 +53,9 @@ func _input(event):
 	if Input.is_key_pressed(KEY_Q):
 		state = "cast"
 		pressed_skill = "q"
+		$Player/Mana.current -=25
 		$Player/AnimationPlayer.play("Standing2HCastSpell01")
 		$Player/AuxScene/Node2/Skeleton/BoneAttachment/Spatial.visible = true
 		$Player/AuxScene/Node2/Skeleton/BoneAttachment2/Spatial.visible = true
-		print("yassss")
+		
 		

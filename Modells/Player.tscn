@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Modells/Spatial.gd" type="Script" id=1]
 [ext_resource path="res://Player/player_mesh.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Player/Spells/glyph/glyph.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interface/Health/HealthBar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interface/Mana/ManaBar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Interface/Health/Health.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Interface/Mana/Mana.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.517901
@@ -56,3 +58,12 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.0557404, 0, 0, 0, 0.0557404, 0, 0, 0, 0.0557404, 0, 4.99096, 0 )
+
+[node name="Health" parent="Player" instance=ExtResource( 7 )]
+
+[node name="Mana" parent="Player" instance=ExtResource( 8 )]
+
+[connection signal="changed" from="Player/Health" to="Camera/Sprite/HealthBar" method="set_value"]
+[connection signal="max_changed" from="Player/Health" to="Camera/Sprite/HealthBar" method="set_max"]
+[connection signal="changed" from="Player/Mana" to="Camera/Sprite/ManaBar" method="set_value"]
+[connection signal="max_changed" from="Player/Mana" to="Camera/Sprite/ManaBar" method="set_max"]
