@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Modells/Spatial.gd" type="Script" id=1]
 [ext_resource path="res://Player/player_mesh.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Modells/Camera.gd" type="Script" id=3]
 [ext_resource path="res://Player/Spells/glyph/glyph.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interface/Health/HealthBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interface/Mana/ManaBar.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.517901
@@ -19,6 +21,20 @@ shape = SubResource( 1 )
 transform = Transform( 0.773098, 0.463658, -0.432829, 0.0547038, 0.631105, 0.773766, 0.631924, -0.621874, 0.462542, -9.96111, 20.725, 13.9669 )
 far = 150.0
 script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Camera"]
+
+[node name="HealthBar" parent="Camera/Sprite" instance=ExtResource( 5 )]
+margin_left = 24.0
+margin_top = 32.0
+margin_right = 328.0
+margin_bottom = 72.0
+
+[node name="ManaBar" parent="Camera/Sprite" instance=ExtResource( 6 )]
+margin_left = 24.0
+margin_top = 88.0
+margin_right = 328.0
+margin_bottom = 128.0
 
 [node name="Skills" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00708, 0 )
