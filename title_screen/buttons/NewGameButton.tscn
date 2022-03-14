@@ -9,7 +9,10 @@ margin_bottom = 60.0
 rect_min_size = Vector2( 360, 60 )
 flat = true
 script = ExtResource( 2 )
-scene_to_load = "res://test.tscn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene_to_load = "res://Maps/Falu.tscn"
 
 [node name="Label" type="Label" parent="."]
 anchor_right = 1.0

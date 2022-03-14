@@ -17,6 +17,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1283.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Menu" type="VBoxContainer" parent="."]
 margin_left = 120.0
 margin_top = 80.0
@@ -86,4 +93,5 @@ text = "Version 1.0.0"
 
 [node name="FadeIn" parent="." instance=ExtResource( 8 )]
 
+[connection signal="pressed" from="Menu/CenterRow/Buttons/Exit" to="Menu/CenterRow/Buttons/Exit" method="_on_Exit_pressed"]
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

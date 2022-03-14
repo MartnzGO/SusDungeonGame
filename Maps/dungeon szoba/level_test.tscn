@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://dungeon szoba/test_dungeon_szoba.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Maps/dungeon szoba/test_dungeon_szoba.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Modells/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Modells/Navigation.gd" type="Script" id=3]
 [ext_resource path="res://Modells/Particle.tscn" type="PackedScene" id=4]

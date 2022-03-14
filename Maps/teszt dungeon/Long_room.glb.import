@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/test_dungeon_szoba.glb-8e90785ed189d4d688a9587c1270e317.scn"
+path="res://.import/Long_room.glb-b21f76dd65002d35fd49f9933e667d53.scn"
 
 [deps]
 
-source_file="res://dungeon szoba/test_dungeon_szoba.glb"
-dest_files=[ "res://.import/test_dungeon_szoba.glb-8e90785ed189d4d688a9587c1270e317.scn" ]
+source_file="res://Maps/teszt dungeon/Long_room.glb"
+dest_files=[ "res://.import/Long_room.glb-b21f76dd65002d35fd49f9933e667d53.scn" ]
 
 [params]
 

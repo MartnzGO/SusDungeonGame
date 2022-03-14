@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/Map Generator Testing Ground/generator.gd" type="Script" id=1]
-[ext_resource path="res://teszt dungeon/Long_room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Maps/teszt dungeon/Long_room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Map Generator Testing Ground/modular_room.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/TileSets/Dungeon1/corridor-L.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/TileSets/Dungeon1/bridge-room.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/TileSets/Dungeon1/corridor-short.tscn" type="PackedScene" id=7]
@@ -22,10 +23,8 @@ use_physics_engine = false
 visible = false
 
 [node name="room_start" parent="DungeonGenerator/rooms" instance=ExtResource( 8 )]
-probability = 0
 
 [node name="bridge-room" parent="DungeonGenerator/rooms" instance=ExtResource( 6 )]
-probability = 0
 
 [node name="corridor-L" parent="DungeonGenerator/rooms" instance=ExtResource( 5 )]
 is_room = false
@@ -37,10 +36,8 @@ is_room = false
 is_room = false
 
 [node name="threedoor-room" parent="DungeonGenerator/rooms" instance=ExtResource( 10 )]
-probability = 0
 
 [node name="fourdoor-room" parent="DungeonGenerator/rooms" instance=ExtResource( 11 )]
-probability = 0
 
 [node name="corridor_joint" parent="DungeonGenerator/rooms" instance=ExtResource( 13 )]
 is_room = false
@@ -49,60 +46,276 @@ is_room = false
 is_room = false
 
 [node name="Long_room" parent="DungeonGenerator/rooms" instance=ExtResource( 2 )]
-probability = 10
 
 [node name="objects" type="Spatial" parent="DungeonGenerator"]
 visible = false
 
 [node name="generated" type="Spatial" parent="DungeonGenerator"]
 
-[node name="room_start" parent="DungeonGenerator/generated" instance=ExtResource( 8 )]
-probability = 0
+[node name="room_start" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 8 )]
+script = ExtResource( 3 )
 
-[node name="corridor-L" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84645, 0.02504, 15.9055 )
+[node name="corridor-long" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8421, 0.02504, 15.9024 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor_joint" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.1904, 1.01229, 14.5286 )
+[node name="bridge-room" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54971, 0.00689006, 31.8355 )
+script = ExtResource( 3 )
+
+[node name="corridor-long2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.43817, 0.00145113, 49.6184 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor-short" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.6664, 0.00991809, 16.6736 )
+[node name="corridor_joint" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -3.38469, 1.00382, 58.0222 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor_joint2" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.9938, 1.01229, 14.4181 )
+[node name="corridor-L" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -4.76165, 0.0165731, 66.3662 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor-L2" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29.497, 0.00991809, 16.57 )
+[node name="threedoor-room" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 16.0606, 0.0169431, 71.0673 )
+script = ExtResource( 3 )
+
+[node name="corridor-short" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.8506, 0.0169431, 70.0722 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor_joint3" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1201, 0.997166, 8.22604 )
+[node name="threedoor-room2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 10 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 8.14263, 0.0173131, 90.8672 )
+script = ExtResource( 3 )
+
+[node name="corridor-L2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 21.3997, 0.0320651, 98.5942 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor-L3" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.2719, -0.0052039, 0.722838 )
+[node name="corridor-L3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 23.7875, 0.0316951, 57.8102 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor_joint4" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.928, 0.982044, -1.2002 )
+[node name="fourdoor-room" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.2889, 0.034435, 85.1123 )
+script = ExtResource( 3 )
+
+[node name="room_start2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 27.634, 0.00665498, 41.9047 )
+script = ExtResource( 3 )
+
+[node name="corridor-L4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.12117, 0.0324351, 88.5357 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor-L4" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.584, -0.0052039, 0.176759 )
+[node name="corridor-long3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 31.4514, 0.032065, 79.9175 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor_joint5" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -15.7359, 0.997166, -7.32644 )
+[node name="threedoor-room3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 10 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -1.57996, 0.0328051, 109.358 )
+script = ExtResource( 3 )
+
+[node name="room_start3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 35.2935, 0.007025, 64.0151 )
+script = ExtResource( 3 )
+
+[node name="corridor-short2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.584908, 0.0328051, 106.148 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="corridor-L5" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14.5878, -0.0052039, -14.8296 )
+[node name="corridor-L5" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 40.0829, 0.047187, 108.24 )
+script = ExtResource( 3 )
 is_room = false
 
-[node name="Long_room" parent="DungeonGenerator/generated" instance=ExtResource( 2 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 6.128, 0.0906491, -13.4527 )
-probability = 10
+[node name="corridor_joint2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -8.06088, 1.03518, 108.293 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-L6" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 11.6771, 0.0475571, 117.085 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor_joint3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 47.5861, 1.04956, 106.088 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-short3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 43.9853, 0.032065, 90.9318 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor_joint4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 19.1803, 1.04993, 118.233 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="fourdoor-room2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 11 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 50.8473, 0.034435, 77.4567 )
+script = ExtResource( 3 )
+
+[node name="corridor-long4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 9 )]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 55.0862, 0.047187, 107.232 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-long5" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 54.0098, 0.032065, 72.2619 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-short4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 66.5437, 0.032065, 83.2762 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-L7" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -16.4048, 0.0479271, 106.916 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-L8" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.6835, 0.047557, 116.081 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor_joint5" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 74.0197, 1.03444, 81.1311 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="bridge-room2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.2976, 0.053366, 124.702 )
+script = ExtResource( 3 )
+
+[node name="fourdoor-room3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 11 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 24.3905, 0.0348051, 121.216 )
+script = ExtResource( 3 )
+
+[node name="bridge-room3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, 51.6147, 0.0139151, 57.2325 )
+script = ExtResource( 3 )
+
+[node name="corridor-L9" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 62.6413, 0.047187, 100.585 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-short5" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.0142, 0.0715159, 134.559 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-long6" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 9 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.6007, 0.0324351, 133.6 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-long7" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, 1, 54.6059, 0.00847614, 38.5459 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="room_start4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 78.5468, 0.0221469, 104.431 )
+script = ExtResource( 3 )
+
+[node name="Birch_exit" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 12 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.1691, 1.07389, 142.035 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="Birch_exit2" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.10066, 1.03481, 132.456 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="bridge-room4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, 4.37114e-07, 0, 1, 0, -4.37114e-07, 0, -1, 52.2108, -0.00967383, 23.5165 )
+script = ExtResource( 3 )
+
+[node name="corridor-short6" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, -5.24537e-07, 0, 1, 0, 5.24537e-07, 0, 1, 55.2109, -0.0151128, 10.9062 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-short7" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 76.3472, 0.032065, 83.3866 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-L10" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 36.1846, 0.0475571, 144.344 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-short8" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 40.087, 0.0324351, 127.036 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="Birch_exit3" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 12 )]
+transform = Transform( -2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 83.8231, 1.03444, 84.5416 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor_joint6" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 13 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 43.6878, 1.04993, 145.492 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="Birch_exit4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, -5.24537e-07, 0, 1, 0, 5.24537e-07, 0, 1, 56.3659, 0.987257, 3.43024 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-L11" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.191, 0.047557, 143.34 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="fourdoor-room4" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 11 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 46.9489, 0.0348051, 113.561 )
+script = ExtResource( 3 )
+
+[node name="room_start5" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 8 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 47.1157, 0.00739503, 160.087 )
+script = ExtResource( 3 )
+
+[node name="corridor-L12" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 68.6619, 0.0475571, 118.502 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="Birch_exit5" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 12 )]
+transform = Transform( 3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 63.49, 1.04956, 109.479 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="corridor-L13" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 58.743, 0.0475571, 136.689 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="Birch_exit6" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 66.2462, 1.04993, 137.837 )
+script = ExtResource( 3 )
+is_room = false
+
+[node name="Birch_exit7" type="Spatial" parent="DungeonGenerator/generated" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 69.81, 1.04993, 110.998 )
+script = ExtResource( 3 )
+is_room = false
