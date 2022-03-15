@@ -10,6 +10,7 @@ onready var current = max_amount setget set_current
 func _ready():
 	_initialize()
 	
+	
 func set_max(new_max):
 	max_amount = new_max
 	max_amount = max(1, new_max)

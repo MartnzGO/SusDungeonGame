@@ -2,8 +2,24 @@ extends KinematicBody
 var state = ""
 var pressed_skill = ""
 
+
+
+export var health = 200
+export var mana = 100
+var _mana = 200
+var _health = 200
+
+func got_dmg(damage, vector):
+	health-=damage
+	if health < 0:
+		get_tree().change_scene('res://title_screen/TitleScreen.tscn')
+
 func _ready():
-	pass # Replace with function body.
+	$Player/Health.set_max(health)
+	$Player/Health.set_current(health)
+	$Player/Mana.set_max(mana)
+	$Player/Mana.set_current(mana)
+	pass
 
 func move(vector):
 	if state != "cast":
@@ -39,9 +55,13 @@ func _process(delta):
 		print(state)
 		state=""
 		$Player/AnimationPlayer.play("BreathingIdle")
-	if $Player/Mana.current < $Player/Mana.max_amount:
-		$Player/Mana.current = $Player/Mana.current+0.05
-	
+	if mana != _mana:
+		_mana = mana
+		$Player/Mana.set_current(mana)
+		mana = mana+0.01
+	if health != _health:
+		_health = health
+		$Player/Health.set_current(health)
 	pass
 
 
@@ -50,10 +70,9 @@ func idle():
 		$Player/AnimationPlayer.play("BreathingIdle")
 	
 func _input(event):
-	if Input.is_key_pressed(KEY_Q):
+	if Input.is_key_pressed(KEY_Q) and $Skills/Q/scene.can_cast:
 		state = "cast"
 		pressed_skill = "q"
-		$Player/Mana.current -=25
 		$Player/AnimationPlayer.play("Standing2HCastSpell01")
 		$Player/AuxScene/Node2/Skeleton/BoneAttachment/Spatial.visible = true
 		$Player/AuxScene/Node2/Skeleton/BoneAttachment2/Spatial.visible = true
