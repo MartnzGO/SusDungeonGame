@@ -42,7 +42,7 @@ window/size/always_on_top=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Map Generator Testing Ground/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/zylann.scatter/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Map Generator Testing Ground/plugin.cfg", "res://addons/scatter/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg", "res://addons/zylann.scatter/plugin.cfg" )
 
 [input]
 

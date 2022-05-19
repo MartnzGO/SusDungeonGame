@@ -16,7 +16,7 @@ func _ready():
 #	pass
 func _input(event):
 	if Input.is_action_just_pressed("left_click") and inside == true:
-		get_tree().change_scene("res://Maps/dungeon szoba/level_test.tscn")
+		get_tree().change_scene("res://Scenes/Dungeonforfun.tscn")
 
 
 func _on_Area_mouse_entered():

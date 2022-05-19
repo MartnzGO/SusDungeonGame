@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/Spells/dark_fire_stream/dark_fire.tres" type="Material" id=1]
+[ext_resource path="res://Player/Spells/dark_fire_stream/dark_fire.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 2.32653
+
+[node name="Spatial" type="MeshInstance"]
+transform = Transform( 2.48447, 0, 0, 0, -0.618148, 0.0273683, 0, 0.216425, 20.8575, 0, 4.59795, 37.7585 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.997783, -0.0649163, 0, 3.72529e-09, 0.145446, 0, -0.032268, -0.728814 )
+light_color = Color( 0.0980392, 0.101961, 0.294118, 1 )
+light_energy = 50.0
+light_indirect_energy = 1.69
+light_negative = true
+shadow_enabled = true
+omni_range = 44.2369
+
+[node name="spell" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="spell"]
+shape = SubResource( 2 )

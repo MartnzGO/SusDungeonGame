@@ -76,5 +76,4 @@ func _input(event):
 		$Player/AnimationPlayer.play("Standing2HCastSpell01")
 		$Player/AuxScene/Node2/Skeleton/BoneAttachment/Spatial.visible = true
 		$Player/AuxScene/Node2/Skeleton/BoneAttachment2/Spatial.visible = true
-		
-		
+	

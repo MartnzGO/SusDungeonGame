@@ -1,0 +1,8 @@
+{
+	"contains_albedo": false,
+	"resolution": 4048,
+	"src": {
+		"a": "res://Textures/StoneRoad/Ground037_4K_Roughness.png",
+		"rgb": "res://Textures/StoneRoad/Ground037_4K_NormalGL.png"
+	}
+}

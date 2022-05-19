@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/movement_indicator.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Fade_out"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Spatial" type="MeshInstance"]
+transform = Transform( 0.362529, 0, 0, 0, 0.362529, 0, 0, 0, 0.362529, 0, 0.59913, 0 )
+cast_shadow = 0
+mesh = SubResource( 2 )
+material/0 = null
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fade_out = SubResource( 3 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+light_energy = 4.9
